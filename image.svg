@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="220" viewBox="0 0 800 220" aria-labelledby="title desc" role="img">
+  <title id="title">Basic shapes: circle, ellipse, triangle, pentagon, hexagon</title>
+  <desc id="desc">Simple colored shapes for students with different fills and strokes.</desc>
+
+  <!-- background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Circle -->
+  <g transform="translate(90,60)">
+    <circle cx="0" cy="0" r="40" fill="#ffd166" stroke="#d97706" stroke-width="4"/>
+    <text x="0" y="70" font-family="Arial" font-size="14" text-anchor="middle">Circle</text>
+  </g>
+
+  <!-- Ellipse -->
+  <g transform="translate(240,60)">
+    <ellipse cx="0" cy="0" rx="55" ry="35" fill="#6ee7b7" stroke="#059669" stroke-width="3"/>
+    <text x="0" y="70" font-family="Arial" font-size="14" text-anchor="middle">Ellipse</text>
+  </g>
+
+  <!-- Triangle -->
+  <g transform="translate(400,60)">
+    <!-- equilateral-ish triangle -->
+    <polygon points="0,-50 43,25 -43,25" fill="#93c5fd" stroke="#1e40af" stroke-width="3"/>
+    <text x="0" y="70" font-family="Arial" font-size="14" text-anchor="middle">Triangle</text>
+  </g>
+
+  <!-- Pentagon -->
+  <g transform="translate(560,60)">
+    <!-- regular pentagon centred at (0,0), radius ~45 -->
+    <polygon points="0,-48 45,-15 28,39 -28,39 -45,-15" fill="#fca5a5" stroke="#b91c1c" stroke-width="3"/>
+    <text x="0" y="70" font-family="Arial" font-size="14" text-anchor="middle">Pentagon</text>
+  </g>
+
+  <!-- Hexagon -->
+  <g transform="translate(700,60)">
+    <!-- regular hexagon centred at (0,0), radius ~45 -->
+    <polygon points="39,-23 39,23 0,46 -39,23 -39,-23 0,-46" fill="#c7b3ff" stroke="#5b21b6" stroke-width="3"/>
+    <text x="0" y="70" font-family="Arial" font-size="14" text-anchor="middle">Hexagon</text>
+  </g>
+</svg>

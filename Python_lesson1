@@ -1,0 +1,9 @@
+print("Welcome in our shop")
+age = int(input("What is your age? "))
+if age < 18:
+    print("You are not alowed to buy vodka yet")
+else:
+    price = float(input("Give me a price in format XX.YY: "))
+    final_price = 1.23 * price
+    print(f"You should pay {final_price}")
+print("Thank you for shopping")

@@ -1,0 +1,39 @@
+def validate_grade(grade):
+    valid = True
+    if grade < 2.0:
+       valid = False
+    elif grade > 5.0:
+       valid = False
+    elif grade == 2.5:
+        valid = False
+    elif grade % 0.5 == 0:
+        valid = True
+    else:
+        valid = False
+    return valid
+    return valid
+    return valid
+def is_passing(grade):
+    valid = validate_grade(grade)
+    if valid:
+        if grade == 2.0:
+            return False
+        else:
+            return True
+    else:
+        return False
+
+print(validate_grade(1.5))
+fname = "Marcin"#input("Enter your first name: ")
+lname = "Kurzyna"#input("Enter your last name: ")
+course_1_name = "Python"#input("Enter your course name: ")
+course_2_name = "Linux"
+grade_as_a_string_python = input("Enter your grade: ")
+grade_as_a_float_python = float(grade_as_a_string_python)
+grade_as_a_string_linux = input("Enter your grade: ")
+grade_as_a_float_linux = float(grade_as_a_string_linux)
+if is_passing(grade_as_a_float_python) and is_passing(grade_as_a_float_linux):
+    print("Well done!!!")
+else:
+    print("Your grade is not passing")
+

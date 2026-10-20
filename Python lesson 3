@@ -1,0 +1,51 @@
+
+
+def average(x, y):
+    result = x + y
+    result = result / 2
+    return result
+
+def average(array):
+    sum = 0
+    for value in array:
+        sum += value
+    result = sum / len(array)
+    return result
+
+def bubble_sort(array, order):
+    for i in range(len(array) - 1):
+        for j in range(len(array) - 1 ):
+            if order == "A":
+                if array[j] > array[j+1]:
+                    array[j], array[j+1] = swap(array[j], array[j+1])
+            else:
+                if array[j] < array[j+1]:
+                    array[j], array[j+1] = swap(array[j], array[j+1])
+    return array
+
+def swap(x,y):
+    temp = x
+    x = y
+    y = temp
+    return x, y
+def minimum(x,y):
+    if x < y:
+        return x
+    else:
+        return y
+def maximum(x,y):
+    if x > y:
+        return x
+    else:
+        return y
+
+
+numbers = [67,-100,3.5,-20,-1000]
+print(bubble_sort(numbers, "D"))
+# print(average(numbers))
+# x = 6
+# y = 5
+# print(f"My numbers are {x} and {y}")
+# x, y = swap(x, y)
+# print(f"My numbers are {x} and {y}")
+

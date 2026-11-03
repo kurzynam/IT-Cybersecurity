@@ -1,0 +1,37 @@
+def swap(array, i, j):
+    temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+    return array
+
+def bubble_sort(array):
+    n = len(array)
+    for i in range(n - 1):
+        for j in range(n -1 - i):
+            if array[j] > array[j + 1]:
+                array = swap(array, j, j + 1)
+    return array
+
+
+def linear_search(array, target):
+    n = len(array)
+    for i in range(n):
+        if array[i] == target:
+            return True
+    return False
+
+def log_search(array, target, left, right):
+    # your array needs to be sorted first
+    if left > right:
+        return False
+    mid = (right + left)//2
+    if (array[mid] == target):
+        return True
+    elif (array[mid] < target):
+        return log_search(array, target, mid+1, right)
+    else:
+        return log_search(array, target, left, mid-1)
+
+
+sorted = bubble_sort([5, 4, 27, -3, 3, 2, 1, 112])
+print(log_search(sorted, 26, 0, len(sorted)-1))

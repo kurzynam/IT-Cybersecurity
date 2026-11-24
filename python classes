@@ -1,0 +1,46 @@
+import math
+
+
+class Animal:
+    def __init__(self, name):
+        self.name = name.upper()
+    def info(self):
+        print(f"Hello, my name is {self.name}")
+    def locate(self):
+        self.x = self.y = 0
+    def give_location(self):
+        print(f"I am at x = {self.x}, y = {self.y}")
+    def distance(self):
+        distance = math.sqrt(self.x**2 + self.y**2)
+        return distance
+
+class Mammal(Animal):
+    def __init__(self, name, healthy_temperature):
+        super().__init__(name)
+        self.healthy_temperature = healthy_temperature
+    def run(self, velocity_x, velocity_y, time):
+        self.x += velocity_x*time
+        self.y += velocity_y*time
+
+class Dog(Mammal):
+    def __init__(self, name, healthy_temperature, tail_length):
+        super().__init__(name, healthy_temperature)
+        self.tail_length = tail_length
+
+
+whale = Mammal("Alice", 36)
+mammal = Mammal("Bingo", 40)
+dog = Dog("Bluey", 40, 0.5)
+whale.info()
+whale.locate()
+mammal.info()
+dog.info()
+dog.locate()
+dog.run(3, 4, 10)
+dog.give_location()
+print(dog.distance())
+
+
+whale.give_location()
+whale.run(3, 4, 10)
+whale.give_location()
